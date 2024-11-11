@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { google, sheets_v4 } = require('googleapis')
-const { GaxiosResponse } = require('gaxios');
+//const { GaxiosResponse } = require('gaxios');
 
 const fs = require('fs');
 const path = require('path');
@@ -20,6 +20,7 @@ console.log("========> googleJsonPath", googleJsonPath);
 if(!fs.existsSync(googleJsonPath)) {
     try {
         fs.writeFileSync(googleJsonPath, JSON.stringify(googleCredentials, null, 2));
+        console.log("google.json file creado success.");    
     } catch (e) {
         throw new Error("Falied to write google.json file:" + e.message);
     }
@@ -31,7 +32,7 @@ if(!fs.existsSync(googleJsonPath)) {
 
 // Inicializa la librería cliente de Google y configura la autenticación con credenciales de la cuenta de servicio.
 const auth = new google.auth.GoogleAuth({
-    keyFile: '/app/google.json',  // Ruta al archivo de clave de tu cuenta de servicio.
+    keyFile: 'google.json',  // Ruta al archivo de clave de tu cuenta de servicio.
     scopes: ['https://www.googleapis.com/auth/spreadsheets']  // Alcance para la API de Google Sheets.
 });
 
@@ -76,6 +77,9 @@ async function readSheet(sheet) {
             spreadsheetId,
             range
         });
+
+        console.log("response ==========> ", response);
+
         const rows = response.data.values; // Extrae las filas de la respuesta.
         return rows; // Devuelve las filas.
     } catch (error) {
