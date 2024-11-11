@@ -27,7 +27,10 @@ const dateFlow = addKeyword(EVENTS.ACTION)
         async (ctx, ctxFn) => {
             
             const currentDate = new Date();
-            const solicitedDate = await text2iso(ctx.body);         
+            const solicitedDate = await text2iso(ctx.body);   
+
+            console.log("solicitedDate GPT ", solicitedDate);
+            
             
             if(solicitedDate.includes("false")) {
                 return ctxFn.endFlow("No se pudo deducir una fecha. Vuelve a intentar");

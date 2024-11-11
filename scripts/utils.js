@@ -38,7 +38,11 @@ function  iso2text(iso) {
 
 // el lunes 9 a las 9am
 async function text2iso(text) {
+
+
     const currentDate = new Date();
+
+    console.log("text2iso", currentDate);
 
     const prompt = "La fecha de hoy es: " + currentDate + `Te voy a dar un texto.
         Necesito que de ese texto extraigas la fecha y la hora del texto que te voy a dar y respondas con la misma en formato ISO.

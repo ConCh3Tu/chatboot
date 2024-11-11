@@ -1,12 +1,8 @@
 const { createBot, createProvider, createFlow, addKeyword, EVENTS } = require('@bot-whatsapp/bot')
 
-
 const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
-
-
-
 // _init_app
 const { getParsedDataMenuApp } = require("./scripts/config")
 
@@ -29,15 +25,19 @@ require("moment-timezone");  // Extiende moment con moment-timezone
 const flowPrincipal = addKeyword(EVENTS.WELCOME)    
 
     .addAction( async ( ctx, ctxFn ) => {
-        const nav = await getParsedDataMenuApp();
 
+        const nav = await getParsedDataMenuApp();
 
         moment.locale('es');
 
         // Obtener la fecha y hora actual en la zona horaria de Perú
         const peruTime = moment().tz("America/Lima").format("YYYY-MM-DD HH:mm:ss");
+        const peruTimeISO = moment().tz("America/Lima").format("YYYY-MM-DDTHH:mm:ss.SSSZ");
+
 
         console.log("hora de peru ", peruTime);
+        console.log("hora de peruTimeISO ", peruTimeISO);
+        
 
 
         if( nav != null) {
