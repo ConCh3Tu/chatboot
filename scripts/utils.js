@@ -42,7 +42,15 @@ async function text2iso(text) {
 
     const currentDate = new Date();
 
-    console.log("text2iso", currentDate);
+    console.log("text2iso ", currentDate); // 2024-11-11T20:52:38.921Z
+
+
+    const offsetDate = new Date(currentDate.getTime() - currentDate.getTimezoneOffset() * 60000)
+        .toISOString()
+        .replace("Z", "-05:00"); // Reemplaza 'Z' con el desfase de Perú
+
+    console.log("Hora local en formato ISO con UTC-5:", offsetDate); // "2024-11-11T20:58:21.436-05:00"
+
 
     const prompt = "La fecha de hoy es: " + currentDate + `Te voy a dar un texto.
         Necesito que de ese texto extraigas la fecha y la hora del texto que te voy a dar y respondas con la misma en formato ISO.

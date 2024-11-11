@@ -28,8 +28,9 @@ const dateFlow = addKeyword(EVENTS.ACTION)
             
             const currentDate = new Date();
             const solicitedDate = await text2iso(ctx.body);   
+            
 
-            console.log("solicitedDate GPT ", solicitedDate);
+            console.log("               solicitedDate GPT ", solicitedDate);
             
             
             if(solicitedDate.includes("false")) {

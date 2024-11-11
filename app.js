@@ -31,12 +31,12 @@ const flowPrincipal = addKeyword(EVENTS.WELCOME)
         moment.locale('es');
 
         // Obtener la fecha y hora actual en la zona horaria de Perú
-        const peruTime = moment().tz("America/Lima").format("YYYY-MM-DD HH:mm:ss");
-        const peruTimeISO = moment().tz("America/Lima").format("YYYY-MM-DDTHH:mm:ss.SSSZ");
+        //const peruTime = moment().tz("America/Lima").format("YYYY-MM-DD HH:mm:ss");
+        //const peruTimeISO = moment().tz("America/Lima").format("YYYY-MM-DDTHH:mm:ss.SSSZ");
 
 
-        console.log("hora de peru ", peruTime);
-        console.log("hora de peruTimeISO ", peruTimeISO);
+        //console.log("hora de peru ", peruTime);
+        //console.log("hora de peruTimeISO ", peruTimeISO);
         
 
 
