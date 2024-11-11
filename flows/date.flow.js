@@ -56,7 +56,7 @@ const dateFlow = addKeyword(EVENTS.ACTION)
         
                 let dateAvaiable = await isDateAvaiable(startDate);  
                 
-                console.log("fecha viable ", dateAvaiable );
+                //console.log("fecha viable ", dateAvaiable );
 
 
                 if( dateAvaiable === false ) {

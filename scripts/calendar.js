@@ -238,14 +238,10 @@ async function isDateAvaiable(date) {
         
         console.log("fecha estado ", (fecha < fechaActual || date > fechaMaxima) )
 
-        /*
         if(fecha < fechaActual || date > fechaMaxima) {
             return false; // La fecha esta fuera del rango permitido
         }
-            */
         
-
-
         // Verificar que la fecha caiga en un dia permitido
         const dayOfWeek = date.getDay();
         if(!rangeLimit.days.includes(dayOfWeek)) {
@@ -258,8 +254,14 @@ async function isDateAvaiable(date) {
             return false; // La hora no esta dentro del rango permitido
         }
 
+        console.log("day", dayOfWeek)
+        console.log("hour", hour)
+
+
         // Obtener todos los slots disponibles desde la fecha actual hasta el liminte definido
         const availableSlots = await listAvaibleSlots(currentDate);
+
+        console.log("availableSlots ",availableSlots);
 
         // Filtrar slots disponibles basados en la fecha dada
         const slotsOnGivenDate = availableSlots.filter(slot => new Date(slot.start).toDateString() ===  date.toDateString());
