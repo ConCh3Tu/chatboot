@@ -1,5 +1,12 @@
 const { google } = require('googleapis')
 
+const moment = require('moment');
+require('moment/locale/es'); // Importa el idioma español
+require("moment-timezone");  // Extiende moment con moment-timezone
+moment.locale('es');
+
+
+
 // Inicia la libreria de Google y configura la autenticacion con credenciales de la cuenta 
 const auth = new google.auth.GoogleAuth({
     keyFile: './google.json',   // Ruta del archivo de la clave de tu cuenta de servicio Calendar
@@ -195,14 +202,36 @@ async function getNextAvaiableSlot(date) {
 *  ============================================================================================================
 */ 
 async function isDateAvaiable(date) {
+    
+    console.log("****************************************************************************")
+    console.log("****************************************************************************");
+
+    
 
     try {
+
         // Validar que la fecha este dentro del rango permitido
         const currentDate = new Date();
         const maxDate = new Date(currentDate);
         maxDate.setDate(currentDate.getDate() + dateLimit);
 
+        console.log("isDateAvaiable  == startDate", date); // 2024-11-11T18:00:00.000
+        console.log("currentDate", currentDate);
+        console.log("maxDate", maxDate);
+
+
         if(date < currentDate || date > maxDate) {
+            return false; // La fecha esta fuera del rango permitido
+        }
+
+
+        const fecha =  moment.tz(date, timeZone);
+
+        let fechaActual = moment.tz(timeZone);
+        let fechaMaxima = fechaActual.clone().add(1, 'hour');
+
+    
+        if(fecha < currentDate || fecha > maxDate) {
             return false; // La fecha esta fuera del rango permitido
         }
 

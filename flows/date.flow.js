@@ -30,7 +30,7 @@ const dateFlow = addKeyword(EVENTS.ACTION)
             const solicitedDate = await text2iso(ctx.body);   
             
 
-            console.log("               date respuesta GPT ", solicitedDate);
+            console.log("date respuesta GPT ", solicitedDate);
             
             
             if(solicitedDate.includes("false")) {
@@ -50,9 +50,7 @@ const dateFlow = addKeyword(EVENTS.ACTION)
             let datSus = await getParsedDataSuspenciones();
             
             status = datSus.some(item => item.fecha === fechaSuspencion);        
-            const eventoData = datSus.find(item => item.fecha === fechaSuspencion);
-
-            console.log("eventoData",eventoData);
+            const eventoData = datSus.find(item => item.fecha === fechaSuspencion);            
 
             if(!status) {
         
