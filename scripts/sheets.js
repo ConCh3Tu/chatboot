@@ -23,6 +23,16 @@ if(!fs.existsSync(googleJsonPath)) {
     }
 }else{
     console.info("google.json file alredy exists.");
+
+    try {
+        const data = fs.readFileSync(googleJsonPath, 'utf8');
+        const jsonData = JSON.parse(data);  // Parsear el JSON
+        console.log("========================================================================");
+        console.log(jsonData);
+        console.log("========================================================================");
+    } catch (err) {
+        console.error("Error al leer el archivo google.json:", err.message);
+    }
 }
 
 
