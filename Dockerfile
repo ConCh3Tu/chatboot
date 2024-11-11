@@ -1,4 +1,5 @@
 FROM node:18-bullseye as bot
+ENV TZ=America/Lima
 WORKDIR /app
 COPY package*.json ./
 RUN npm i
