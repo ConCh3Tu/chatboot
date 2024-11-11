@@ -41,7 +41,7 @@ async function text2iso(text) {
 
     const currentDate = new Date();
 
-    const dateTime = DateTime.fromISO(currentDate, {zone: 'utc'}).setZone('America/Lima');
+    const dateTime = DateTime.fromJSDate(currentDate, {zone: 'utc'}).setZone('America/Lima');
 
     console.log("dateTime luxon ", dateTime); 
 
