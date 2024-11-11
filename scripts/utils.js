@@ -43,13 +43,11 @@ async function text2iso(text) {
     const currentDate = new Date();
 
     console.log("text2iso ", currentDate); // 2024-11-11T20:52:38.921Z
+        
+    const peruDate = currentDate.toLocaleString("es-PE", { timeZone: "America/Lima" });
 
+    console.log("Hora local Perú:", peruDate); // "2024-11-11 15:58:21"
 
-    const offsetDate = new Date(currentDate.getTime() - currentDate.getTimezoneOffset() * 60000)
-        .toISOString()
-        .replace("Z", "-05:00"); // Reemplaza 'Z' con el desfase de Perú
-
-    console.log("Hora local en formato ISO con UTC-5:", offsetDate); // "2024-11-11T20:58:21.436-05:00"
 
 
     const prompt = "La fecha de hoy es: " + currentDate + `Te voy a dar un texto.
