@@ -236,8 +236,11 @@ async function isDateAvaiable(date) {
         console.log("fecha == startDate", fecha);       // 2024-11-11T18:00:00+00:00
         console.log("fecha Actual", fechaActual);       // 2024-11-11T17:26:27-05:00
         console.log("Fecha Maxima", fechaMaxima);       // 2024-11-12T17:26:27-05:00
-
-        console.log( fecha.isBetween(fechaActual, fechaMaxima, null, '[]') );
+        
+        if(fecha < fechaActual || date > fechaMaxima) {
+            return false; // La fecha esta fuera del rango permitido
+        }
+        
 
 
         // Verificar que la fecha caiga en un dia permitido
