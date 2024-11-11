@@ -231,13 +231,14 @@ async function isDateAvaiable(date) {
         const fecha =  moment(date).format();
 
         let fechaActual = moment.tz(currentDate,timeZone);
-        let fechaMaxima = moment(fechaActual).add(1, 'days');
+        let fechaMaxima = moment(fechaActual).add(dateLimit, 'days');
 
-        console.log("fecha == startDate", fecha);       // Moment<2024-11-11T13:00:00-05:00>
-        console.log("fecha Actual", fechaActual);       // Moment<2024-11-11T17:09:20-05:00>
-        console.log("Fecha Maxima", fechaMaxima);       // Moment<2024-11-12T17:09:20-05:00>
+        console.log("fecha == startDate", fecha);       // 2024-11-11T18:00:00+00:00
+        console.log("fecha Actual", fechaActual);       // 2024-11-11T17:26:27-05:00
+        console.log("Fecha Maxima", fechaMaxima);       // 2024-11-12T17:26:27-05:00
 
-    
+        console.log( fecha.isBetween(fechaActual, fechaMaxima, null, '[]') );
+
 
         // Verificar que la fecha caiga en un dia permitido
         const dayOfWeek = date.getDay();
