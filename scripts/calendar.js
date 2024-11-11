@@ -228,14 +228,14 @@ async function isDateAvaiable(date) {
         */
 
 
-        const fecha =  moment.tz(date, timeZone);
+        const fecha =  moment(date).format();
 
-        let fechaActual = moment.tz(timeZone);
+        let fechaActual = moment.tz(currentDate,timeZone);
         let fechaMaxima = moment(fechaActual).add(1, 'days');
 
-        console.log("isDateAvaiable  == startDate", fecha); // 
-        console.log("currentDate", fechaActual);            // 
-        console.log("maxDate", fechaMaxima);                // 
+        console.log("fecha == startDate", fecha);       // Moment<2024-11-11T13:00:00-05:00>
+        console.log("fecha Actual", fechaActual);       // Moment<2024-11-11T17:09:20-05:00>
+        console.log("Fecha Maxima", fechaMaxima);       // Moment<2024-11-12T17:09:20-05:00>
 
     
 
