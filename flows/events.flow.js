@@ -27,7 +27,7 @@ const   eventosFlow = addKeyword(EVENTS.ACTION)
         await ctxFn.flowDynamic([
             {
                 body:`Aqui nuestros eventos de este mes. \n${men} \n0. Volver al menú principal`,
-                media: 'D:/WampNode/CAFETERIA RAYMI/base-baileys-memory/transferencias.jpg',                
+                media: 'https://conch3tu.github.io/transferencias.jpg',                
                 delay: 100
             }
         ]); 
