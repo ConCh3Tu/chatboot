@@ -2,19 +2,19 @@ require("dotenv").config();
 const { google, sheets_v4 } = require('googleapis')
 const { GaxiosResponse } = require('gaxios');
 
-//const fs = require('fs');
 
-const { fs } = require('fs')
-const { path } = require('path')
-
+const fs = require('fs');
+const path = require('path');
 
 const googleCredentials = JSON.parse(process.env.GOOGLE_JON);
+
 
 if(!googleCredentials) {
     throw new Error("GOOGLE_JSON enviroment is not defined");
 }
 
 const googleJsonPath = path.join(process.cwd(), 'google.json');
+
 
 if(!fs.existsSync(googleJsonPath)) {
     try {
