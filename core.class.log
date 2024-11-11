@@ -1,0 +1,312 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '51951864369@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0C217A2938D6B02BA8E',
+    participant: undefined
+  },
+  messageTimestamp: 1731343483,
+  pushName: '.Eufemia',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'hola',
+  from: '51951864369'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_61059e71-e31b-475e-a63e-258cab3386fd',
+  keyword: 'key_2f3a44a0-30d7-42ec-aaea-fc9503267dcc',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '9c5581f221d9b5fc69f128d67911d7b1'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51951864369@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0D8FD5B113FA2F7E7BD',
+    participant: undefined
+  },
+  messageTimestamp: 1731343497,
+  pushName: '.Eufemia',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '2',
+  from: '51951864369'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_61059e71-e31b-475e-a63e-258cab3386fd',
+  keyword: 'key_2f3a44a0-30d7-42ec-aaea-fc9503267dcc',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '9c5581f221d9b5fc69f128d67911d7b1'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51951864369@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB096354A395D53DF4D89',
+    participant: undefined
+  },
+  messageTimestamp: 1731343504,
+  pushName: '.Eufemia',
+  broadcast: false,
+  message: Message {
+    conversation: 'para hoy lunes a las 12pm',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'para hoy lunes a las 12pm',
+  from: '51951864369'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_f890a57a-c192-4bd4-8715-e4deadf4d66d',
+  keyword: 'ans_de036144-0263-4f71-bfd1-3b76245d986d',
+  answer: 'Revisando disponibilidad...',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '0e72f7466ea57a7f931251b5fcb0dc03'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_19d32769-7310-4333-b7d8-2f4d39ab52a7',
+  keyword: 'ans_f890a57a-c192-4bd4-8715-e4deadf4d66d',
+  answer: "Confirmar la fecha propuesta? Responde unicamente con 'si' o 'no'",
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '69bf816a83d59020ca122b25f4abb9b5'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51951864369@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0005F333138B4B49A94',
+    participant: undefined
+  },
+  messageTimestamp: 1731343572,
+  pushName: '.Eufemia',
+  broadcast: false,
+  message: Message {
+    conversation: 'si',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'si',
+  from: '51951864369'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51951864369@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0916AE6055233642AB9',
+    participant: undefined
+  },
+  messageTimestamp: 1731343581,
+  pushName: '.Eufemia',
+  broadcast: false,
+  message: Message {
+    conversation: 'MARIO IRIGOLLA',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'MARIO IRIGOLLA',
+  from: '51951864369'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_f0e3ed5f-a8ed-4851-8f4c-e61255c197e5',
+  keyword: 'ans_81c15f4d-bf2c-4cb4-8bb6-f71822654547',
+  answer: '👥 Cantidad de personas:',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '6c7560caebd870c94bdbe8abce90dac9'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51951864369@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0549D15B9A08C799B0F',
+    participant: undefined
+  },
+  messageTimestamp: 1731343583,
+  pushName: '.Eufemia',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '2',
+  from: '51951864369'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_6f0d2b6e-2854-4134-bf4e-b508e746b10f',
+  keyword: 'ans_f0e3ed5f-a8ed-4851-8f4c-e61255c197e5',
+  answer: '🎉 ¿Cual es el motivo?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '2da9bf84035f4429d8f20bf82c490ade'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51951864369@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0F4057A0E4076F40C71',
+    participant: undefined
+  },
+  messageTimestamp: 1731343591,
+  pushName: '.Eufemia',
+  broadcast: false,
+  message: Message {
+    conversation: 'CUMPLEAÑOS',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'CUMPLEAÑOS',
+  from: '51951864369'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_4f4fdc55-f275-489b-9d93-c0ac166244c5',
+  keyword: 'ans_6f0d2b6e-2854-4134-bf4e-b508e746b10f',
+  answer: '🏢 Empresa (si aplica)',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'ce607f68a91e17233df6ccc91bf3cee3'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51951864369@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0D188850E276992D032',
+    participant: undefined
+  },
+  messageTimestamp: 1731343594,
+  pushName: '.Eufemia',
+  broadcast: false,
+  message: Message {
+    conversation: 'NO APLICA',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'NO APLICA',
+  from: '51951864369'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_26ed6479-c08a-4b34-8bb3-3f163fef4cf1',
+  keyword: 'ans_4f4fdc55-f275-489b-9d93-c0ac166244c5',
+  answer: 'Excelente! su reserva fue registrada:',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'eaeb95afd27961b809cebc28cfc8d89a'
+}
