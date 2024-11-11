@@ -29,7 +29,10 @@ const flowPrincipal = addKeyword(EVENTS.WELCOME)
     .addAction( async ( ctx, ctxFn ) => {
         const nav = await getParsedDataMenuApp();
 
-        console.log("=>>>>>>>>>>>>>>> ", new Date());
+        const peruTime = new Date().toLocaleString("es-PE", { timeZone: "America/Lima" });
+
+        console.log("= server >>>>>>>>>>>>>>> ", new Date());
+        console.log("= Lima >>>>>>>>>>>>>>> ", peruTime);
 
         if( nav != null) {
 
