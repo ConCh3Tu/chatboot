@@ -28,6 +28,12 @@ const flowPrincipal = addKeyword(EVENTS.WELCOME)
 
         const nav = await getParsedDataMenuApp();
 
+        let d = new Date();
+        console.log("fecha and time ", d);
+        d.toLocaleTimeString()
+        console.log("-- "+d );
+
+
         moment.locale('es');
 
         // Obtener la fecha y hora actual en la zona horaria de Perú

@@ -22,8 +22,8 @@ const timeZone = 'America/Lima';
 
 const rangeLimit = {
     days: [1,2,3,4,5,6,7], // Lunes a Viernes
-    startHour: 11,
-    endHour: 20
+    startHour: 11 ,
+    endHour: 22
 };
 
 const standarDuration = 1; // Duracion por defecto de las citas (1hora)
@@ -257,9 +257,12 @@ async function isDateAvaiable(date) {
         console.log("day", dayOfWeek)
         console.log("hour", hour)
 
+        let dateCalendar = fechaActual.format('YYYY-MM-DDTHH:mm:ss.SSSZ');
+
+        console.log("=================>>>>>>>>>>>>>> ",dateCalendar);
 
         // Obtener todos los slots disponibles desde la fecha actual hasta el liminte definido
-        const availableSlots = await listAvaibleSlots(currentDate);
+        const availableSlots = await listAvaibleSlots(dateCalendar);
 
         console.log("availableSlots ",availableSlots);
 
