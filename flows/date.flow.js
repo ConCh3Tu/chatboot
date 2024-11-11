@@ -30,14 +30,16 @@ const dateFlow = addKeyword(EVENTS.ACTION)
             const solicitedDate = await text2iso(ctx.body);   
             
 
-            //console.log("               solicitedDate GPT ", solicitedDate);
+            console.log("               date respuesta GPT ", solicitedDate);
             
             
             if(solicitedDate.includes("false")) {
                 return ctxFn.endFlow("No se pudo deducir una fecha. Vuelve a intentar");
             }
             
-            const startDate = new Date(solicitedDate);            
+            const startDate = new Date(solicitedDate);   
+            
+            console.log("Fecha de inicio startDate ", startDate);
 
             moment.locale('es');
     
@@ -54,7 +56,10 @@ const dateFlow = addKeyword(EVENTS.ACTION)
 
             if(!status) {
         
-                let dateAvaiable = await isDateAvaiable(startDate);            
+                let dateAvaiable = await isDateAvaiable(startDate);  
+                
+                console.log("fecha viable ", dateAvaiable );
+
 
                 if( dateAvaiable === false ) {
                     const nextdateAvaiable = await getNextAvaiableSlot(startDate);

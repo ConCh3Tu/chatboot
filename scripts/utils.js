@@ -41,10 +41,6 @@ async function text2iso(text) {
 
     const currentDate = new Date();
 
-    const dateTime = DateTime.fromJSDate(currentDate, {zone: 'utc'}).setZone('America/Lima');
-
-    console.log("dateTime luxon ", dateTime); 
-
     const zoneDate = currentDate.toLocaleString("es-PE", { timeZone: "America/Lima" });
 
     const prompt = "La fecha de hoy es: " + zoneDate + `Te voy a dar un texto.
