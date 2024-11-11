@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const googleCredentials = JSON.parse(process.env.GOOGLE_JON);                                     
-    console.error("=============================> googleCredentials", googleCredentials);
+
 
 if(!googleCredentials) {
     throw new Error("GOOGLE_JSON enviroment is not defined");
@@ -31,16 +31,11 @@ if(!fs.existsSync(googleJsonPath)) {
 
 // Inicializa la librería cliente de Google y configura la autenticación con credenciales de la cuenta de servicio.
 const auth = new google.auth.GoogleAuth({
-    keyFile: 'google.json',  // Ruta al archivo de clave de tu cuenta de servicio.
+    keyFile: '/app/google.json',  // Ruta al archivo de clave de tu cuenta de servicio.
     scopes: ['https://www.googleapis.com/auth/spreadsheets']  // Alcance para la API de Google Sheets.
 });
 
-
-console.log( "----------------------->", auth ) ;
-
 const spreadsheetId = process.env.SPREADSHEEID;
-
-console.log("spreadsheetId =================================> ",spreadsheetId);
 
 // Función asíncrona para escribir datos en una hoja de cálculo de Google.
 async function writeToSheet(values, range) {
@@ -72,6 +67,9 @@ async function writeToSheet(values, range) {
 async function readSheet(sheet) {
     const sheets = google.sheets({ version: 'v4', auth });
     const range = sheet
+
+    console.info("spreadsheetId", spreadsheetId)
+    console.info("range", range)
 
     try {
         const response = await sheets.spreadsheets.values.get({
