@@ -5,9 +5,8 @@ const { GaxiosResponse } = require('gaxios');
 const fs = require('fs');
 const path = require('path');
 
-const googleCredentials = JSON.parse(process.env.GOOGLE_JON);
-
-console.log("googleCredentials", googleCredentials);
+const googleCredentials = JSON.parse(process.env.GOOGLE_JON);                                     
+    console.error("=============================> googleCredentials", googleCredentials);
 
 if(!googleCredentials) {
     throw new Error("GOOGLE_JSON enviroment is not defined");
@@ -16,7 +15,7 @@ if(!googleCredentials) {
 const googleJsonPath = path.join(process.cwd(), 'google.json');
 
 
-console.log("googleJsonPath", googleJsonPath);
+console.log("========> googleJsonPath", googleJsonPath);
 
 if(!fs.existsSync(googleJsonPath)) {
     try {
@@ -38,7 +37,7 @@ const auth = new google.auth.GoogleAuth({
 
 const spreadsheetId = process.env.SPREADSHEEID;
 
-console.log("spreadsheetId", spreadsheetId);
+console.table(spreadsheetId);
 
 // Función asíncrona para escribir datos en una hoja de cálculo de Google.
 async function writeToSheet(values, range) {
