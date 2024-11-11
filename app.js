@@ -29,6 +29,8 @@ const flowPrincipal = addKeyword(EVENTS.WELCOME)
     .addAction( async ( ctx, ctxFn ) => {
         const nav = await getParsedDataMenuApp();
 
+        console.log("=>>>>>>>>>>>>>>> ", new Date());
+
         if( nav != null) {
 
             const bodyText = ctx.body.toLowerCase();
