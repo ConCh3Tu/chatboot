@@ -35,9 +35,12 @@ const auth = new google.auth.GoogleAuth({
     scopes: ['https://www.googleapis.com/auth/spreadsheets']  // Alcance para la API de Google Sheets.
 });
 
+
+console.log( "----------------------->", auth ) ;
+
 const spreadsheetId = process.env.SPREADSHEEID;
 
-console.table(spreadsheetId);
+console.log("spreadsheetId =================================> ",spreadsheetId);
 
 // Función asíncrona para escribir datos en una hoja de cálculo de Google.
 async function writeToSheet(values, range) {
