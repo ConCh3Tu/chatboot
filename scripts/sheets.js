@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { google, sheets_v4 } = require('googleapis')
-//const { GaxiosResponse } = require('gaxios');
+const { GaxiosResponse } = require('gaxios');
 
 const fs = require('fs');
 const path = require('path');
@@ -14,18 +14,15 @@ if(!googleCredentials) {
 
 const googleJsonPath = path.join(process.cwd(), 'google.json');
 
-
-console.log("========> googleJsonPath", googleJsonPath);
-
 if(!fs.existsSync(googleJsonPath)) {
     try {
         fs.writeFileSync(googleJsonPath, JSON.stringify(googleCredentials, null, 2));
-        console.log("google.json file creado success.");    
+        console.info("google.json file creado success.");    
     } catch (e) {
         throw new Error("Falied to write google.json file:" + e.message);
     }
 }else{
-    console.log("google.json file alredy exists.");
+    console.info("google.json file alredy exists.");
 }
 
 
@@ -69,8 +66,8 @@ async function readSheet(sheet) {
     const sheets = google.sheets({ version: 'v4', auth });
     const range = sheet
 
-    console.info("spreadsheetId", spreadsheetId)
-    console.info("range", range)
+    console.info("Sheet =>>>>>>>>>>>>> ", sheets)
+    console.info("range =>>>>>>>>>>>>> ", range)
 
     try {
         const response = await sheets.spreadsheets.values.get({
@@ -78,12 +75,10 @@ async function readSheet(sheet) {
             range
         });
 
-        console.log("response ==========> ", response);
-
         const rows = response.data.values; // Extrae las filas de la respuesta.
         return rows; // Devuelve las filas.
     } catch (error) {
-        console.error('Error', error); // Registra errores.
+        console.error('...!!!Error sheets ol: ', error); // Registra errores.
     }
 }
 
