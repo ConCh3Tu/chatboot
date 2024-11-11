@@ -2,6 +2,30 @@ require("dotenv").config();
 const { google, sheets_v4 } = require('googleapis')
 const { GaxiosResponse } = require('gaxios');
 
+//const fs = require('fs');
+
+const { fs } = require('fs')
+const { path } = require('path')
+
+
+const googleCredentials = JSON.parse(process.env.GOOGLE_JON);
+
+if(!googleCredentials) {
+    throw new Error("GOOGLE_JSON enviroment is not defined");
+}
+
+const googleJsonPath = path.join(process.cwd(), 'google.json');
+
+if(!fs.existsSync(googleJsonPath)) {
+    try {
+        fs.writeFileSync(googleJsonPath, JSON.stringify(googleCredentials, null, 2));
+    } catch (e) {
+        throw new Error("Falied to write google.json file:" + e.message);
+    }
+}else{
+    console.log("google.json file alredy exists.");
+}
+
 // Inicializa la librería cliente de Google y configura la autenticación con credenciales de la cuenta de servicio.
 const auth = new google.auth.GoogleAuth({
     keyFile: 'google.json',  // Ruta al archivo de clave de tu cuenta de servicio.
