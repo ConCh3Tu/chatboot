@@ -30,11 +30,8 @@ const flowPrincipal = addKeyword(EVENTS.WELCOME)
 
         let d = new Date();
         console.log("fecha and time ", d);
-        //d.toLocaleTimeString()
-        console.log("String-- ", d.toDateString() );
-        console.log("Date-- ", d.toLocaleDateString() );
-        console.log("ISO-- ", d.toISOString() );
-        console.log("Time-- ", d.toLocaleTimeString() );
+        d.toLocaleTimeString()
+        console.log("Time-- ", d);
 
         
         

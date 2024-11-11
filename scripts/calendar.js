@@ -260,9 +260,11 @@ async function isDateAvaiable(date) {
         let dateCalendar = fechaActual.format('YYYY-MM-DDTHH:mm:ss.SSSZ');
 
         console.log("=================>>>>>>>>>>>>>> ",dateCalendar);
+        console.log("=================>>>>>>>>>>>>>> ",currentDate);
+        
 
         // Obtener todos los slots disponibles desde la fecha actual hasta el liminte definido
-        const availableSlots = await listAvaibleSlots(dateCalendar);
+        const availableSlots = await listAvaibleSlots(currentDate);
 
         console.log("availableSlots ",availableSlots);
 
