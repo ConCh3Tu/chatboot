@@ -21,8 +21,8 @@ const { welcomeFlow, } = require('./flows/welcome.flow');
 const { dateFlow } = require('./flows/date.flow');
 const { formFlow } = require('./flows/form.flow');
 
-//const moment = require('moment');
-//require('moment/locale/es'); // Importa el idioma español
+const moment = require('moment');
+require('moment/locale/es'); // Importa el idioma español
 
 const moment = require("moment-timezone");
 
@@ -33,7 +33,7 @@ const flowPrincipal = addKeyword(EVENTS.WELCOME)
         const nav = await getParsedDataMenuApp();
 
 
-        //moment.locale('es');
+        moment.locale('es');
 
         // Obtener la fecha y hora actual en la zona horaria de Perú
         const peruTime = moment().tz("America/Lima").format("YYYY-MM-DD HH:mm:ss");
