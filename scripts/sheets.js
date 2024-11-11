@@ -39,7 +39,7 @@ if(!fs.existsSync(googleJsonPath)) {
 
 // Inicializa la librería cliente de Google y configura la autenticación con credenciales de la cuenta de servicio.
 const auth = new google.auth.GoogleAuth({
-    keyFile: 'google.json',  // Ruta al archivo de clave de tu cuenta de servicio.
+    keyFile: googleJsonPath,  // Ruta al archivo de clave de tu cuenta de servicio.
     scopes: ['https://www.googleapis.com/auth/spreadsheets']  // Alcance para la API de Google Sheets.
 });
 
