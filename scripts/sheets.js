@@ -2,12 +2,12 @@ require("dotenv").config();
 const { google, sheets_v4 } = require('googleapis')
 const { GaxiosResponse } = require('gaxios');
 
-
 const fs = require('fs');
 const path = require('path');
 
 const googleCredentials = JSON.parse(process.env.GOOGLE_JON);
 
+console.log("googleCredentials", googleCredentials);
 
 if(!googleCredentials) {
     throw new Error("GOOGLE_JSON enviroment is not defined");
@@ -15,6 +15,8 @@ if(!googleCredentials) {
 
 const googleJsonPath = path.join(process.cwd(), 'google.json');
 
+
+console.log("googleJsonPath", googleJsonPath);
 
 if(!fs.existsSync(googleJsonPath)) {
     try {
@@ -26,21 +28,25 @@ if(!fs.existsSync(googleJsonPath)) {
     console.log("google.json file alredy exists.");
 }
 
+
+
 // Inicializa la librería cliente de Google y configura la autenticación con credenciales de la cuenta de servicio.
 const auth = new google.auth.GoogleAuth({
     keyFile: 'google.json',  // Ruta al archivo de clave de tu cuenta de servicio.
     scopes: ['https://www.googleapis.com/auth/spreadsheets']  // Alcance para la API de Google Sheets.
 });
 
-const spreadsheetId = process.env.SPREADSHEEID
+const spreadsheetId = process.env.SPREADSHEEID;
+
+console.log("spreadsheetId", spreadsheetId);
 
 // Función asíncrona para escribir datos en una hoja de cálculo de Google.
 async function writeToSheet(values, range) {
     const sheets = google.sheets({ version: 'v4', auth }); // Crea una instancia cliente de la API de Sheets.
     const valueInputOption = 'USER_ENTERED'; // Cómo se deben interpretar los datos de entrada.
 
-    //console.log("value", values);
-    //console.log("range", range);
+    console.log("value", values);
+    console.log("range", range);
 
 
     const resource = {
