@@ -204,7 +204,7 @@ async function getNextAvaiableSlot(date) {
 async function isDateAvaiable(date) {
     
     console.log("****************************************************************************")
-    console.log("****************************************************************************");
+    
 
     
 
@@ -216,24 +216,28 @@ async function isDateAvaiable(date) {
         maxDate.setDate(currentDate.getDate() + dateLimit);
 
         console.log("isDateAvaiable  == startDate", date); // 2024-11-11T18:00:00.000
-        console.log("currentDate", currentDate);
-        console.log("maxDate", maxDate);
+        console.log("currentDate", currentDate);           // 2024-11-11T21:57:33.518Z
+        console.log("maxDate", maxDate);                   // 2024-12-11T21:57:33.518Z
+        console.error("****************************************************************************");
+        console.log("****************************************************************************");
 
-
+        /*
         if(date < currentDate || date > maxDate) {
             return false; // La fecha esta fuera del rango permitido
         }
+        */
 
 
         const fecha =  moment.tz(date, timeZone);
 
         let fechaActual = moment.tz(timeZone);
-        let fechaMaxima = fechaActual.clone().add(1, 'hour');
+        let fechaMaxima = moment(fechaActual).add(1, 'days');
+
+        console.log("isDateAvaiable  == startDate", fecha); // 
+        console.log("currentDate", fechaActual);            // 
+        console.log("maxDate", fechaMaxima);                // 
 
     
-        if(fecha < currentDate || fecha > maxDate) {
-            return false; // La fecha esta fuera del rango permitido
-        }
 
         // Verificar que la fecha caiga en un dia permitido
         const dayOfWeek = date.getDay();
