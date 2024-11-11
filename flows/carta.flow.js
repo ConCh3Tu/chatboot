@@ -3,7 +3,7 @@ const { addKeyword, EVENTS } = require('@bot-whatsapp/bot')
 const   cartaFlow = addKeyword(EVENTS.ACTION)        
 
     .addAnswer('Carta', {
-        media: 'https://drive.google.com/file/d/1r1xJiYltPBMw2S7MY0pM6zSeXVr0vTvH/view',                
+        media: 'https://conch3tu.github.io/CARTA_RESPONDONA.pdf',        
          //https://amitel.com.pe/amitelftp/2024/octubre/C0001637.pdf
         //media: './CARTA_RESPONDONA.pdf',                        
     })
