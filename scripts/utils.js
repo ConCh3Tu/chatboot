@@ -39,18 +39,15 @@ function  iso2text(iso) {
 // el lunes 9 a las 9am
 async function text2iso(text) {
 
-
     const currentDate = new Date();
 
-    console.log("text2iso ", currentDate); // 2024-11-11T20:52:38.921Z
-        
-    const peruDate = currentDate.toLocaleString("es-PE", { timeZone: "America/Lima" });
+    const dateTime = DateTime.fromISO(currentDate, {zone: 'utc'}).setZone('America/Lima');
 
-    console.log("Hora local Perú:", peruDate); // "2024-11-11 15:58:21"
+    console.log("dateTime luxon ", dateTime); 
 
+    const zoneDate = currentDate.toLocaleString("es-PE", { timeZone: "America/Lima" });
 
-
-    const prompt = "La fecha de hoy es: " + currentDate + `Te voy a dar un texto.
+    const prompt = "La fecha de hoy es: " + zoneDate + `Te voy a dar un texto.
         Necesito que de ese texto extraigas la fecha y la hora del texto que te voy a dar y respondas con la misma en formato ISO.
         Me tienes que responder EXCLUSIVAMENTE con esa fecha y horarios en formato ISO, usando el horario 10:00 en caso de que no este especificado la hora.
         Por ejemplo, el texto puede ser algo como "el miercoles 4 de setiembre alas 11am". En ese caso tu respuesta tiene que ser 2024-09-04T11:00:00.000
