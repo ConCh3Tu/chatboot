@@ -23,9 +23,7 @@ const { formFlow } = require('./flows/form.flow');
 
 const moment = require('moment');
 require('moment/locale/es'); // Importa el idioma español
-
-const moment = require("moment-timezone");
-
+require("moment-timezone");  // Extiende moment con moment-timezone
 
 const flowPrincipal = addKeyword(EVENTS.WELCOME)    
 
