@@ -264,9 +264,8 @@ async function isDateAvaiable(date) {
         
 
         // Obtener todos los slots disponibles desde la fecha actual hasta el liminte definido
-        const availableSlots = await listAvaibleSlots(currentDate);
-
-        console.log("availableSlots ",availableSlots);
+        const availableSlots = await listAvaibleSlots(dateCalendar);
+        
 
         // Filtrar slots disponibles basados en la fecha dada
         const slotsOnGivenDate = availableSlots.filter(slot => new Date(slot.start).toDateString() ===  date.toDateString());
