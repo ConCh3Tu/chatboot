@@ -257,7 +257,7 @@ async function isDateAvaiable(date) {
         console.log("day", dayOfWeek)
         console.log("hour", hour)
 
-        let dateCalendar = fechaActual.format('YYYY-MM-DDTHH:mm:ss.SSSZ');
+        let dateCalendar = fechaActual.format('YYYY-MM-DDTHH:mm:ss.SSS');
 
         console.log("=================>>>>>>>>>>>>>> ",dateCalendar);
         console.log("=================>>>>>>>>>>>>>> ",currentDate);
