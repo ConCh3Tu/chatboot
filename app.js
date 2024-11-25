@@ -111,7 +111,7 @@ const flowPrincipal = addKeyword(EVENTS.WELCOME)
             
             
             // OP 5 = Eventos especiales y catering ?
-            const keywordsEventos = ["5","horario,","horario de atencion"];
+            const keywordsEventos = ["5","evento,","eventos"];
             const containsKeywordEventos = keywordsEventos.some(keyword => bodyText.includes(keyword));
             if (containsKeywordEventos) {
                 nav.forEach(menu => {                    

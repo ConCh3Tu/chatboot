@@ -13,7 +13,7 @@ const welcomeFlow = addKeyword(EVENTS.ACTION)
             }            
         });
 
-        await ctxFn.endFlow(`¡Hola! Bienvenido a *Raymi Café Respondona*, estamos contentos de tenerte por aquí, por favor elige una de las opciones para poder ayudarte. \n${men} `
+        await ctxFn.endFlow(`¡Hola! Bienvenido a Raymi Café Respondona, estoy contento de tenerte por aquí, por favor elige una de las opciones para poder ayudarte. \n${men} \n\n Ahora elija una de las opciones a continuar`
         );
 
     });
